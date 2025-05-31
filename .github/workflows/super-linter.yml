@@ -1,10 +1,13 @@
 name: Lint C++ with Super-Linter
 
-on: push
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  super-lint:
-    name: Lint code base
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
